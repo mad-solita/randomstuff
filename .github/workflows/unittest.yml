@@ -19,4 +19,5 @@ jobs:
           python-version: '3.13'
       - name: run tests
         run: |
+          echo ${{ GITHUB_PATH }}
           python circumference_of_circe_test.py
