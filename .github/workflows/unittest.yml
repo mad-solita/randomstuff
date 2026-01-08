@@ -16,6 +16,8 @@ jobs:
       - name: setup python
         run: |
           sudo apt-get install python3
+      - name: install project
+        run: pip install -e .
       - name: run tests
         run: |
           python test/circumference_of_circle_test.py
