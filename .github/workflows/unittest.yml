@@ -19,4 +19,4 @@ jobs:
           python-version: '3.13'
       - name: run tests
         run: |
-          python test/circumference_of_circe_test.py
+          python circumference_of_circe_test.py
