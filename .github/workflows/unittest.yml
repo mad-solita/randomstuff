@@ -1,0 +1,22 @@
+name: "Unittest"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v6
+      - name: setup python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: run tests
+        run: |
+          python ./test/circumference_of_circe_test.py
