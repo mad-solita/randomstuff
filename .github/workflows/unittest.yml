@@ -14,9 +14,8 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v6
       - name: setup python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.13'
+        run: |
+          sudo apt-get install python3
       - name: run tests
         run: |
           python test/circumference_of_circle_test.py
